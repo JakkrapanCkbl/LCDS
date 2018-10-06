@@ -7,7 +7,7 @@ Public Class clsDB
     Dim objAppSettingsReader As New AppSettingsReader()
     Dim value As String = String.Empty
     'Private _strConn As String = objAppSettingsReader.GetValue("strConn", value.GetType())
-    Private _strConn As String = objAppSettingsReader.GetValue("strConn", value.GetType()) & "Dido1234;"
+    Private _strConn As String = objAppSettingsReader.GetValue("strConn", value.GetType()) & "Dido12345;"
     'Private _cdcsConn As String = objAppSettingsReader.GetValue("cdcsConn", value.GetType()) & "asdf;"
     Private _cdcsConn As String = ""
     Private _MainFolder As String = objAppSettingsReader.GetValue("MainFolder", value.GetType())
