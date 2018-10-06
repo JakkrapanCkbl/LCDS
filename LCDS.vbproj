@@ -300,8 +300,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="CKBL2-GIS.vbproj" />
-    <Content Include="CKBL2-GIS.vbproj.user" />
     <Content Include="computer_on.ico" />
     <Content Include="LM2.ico" />
     <None Include="Resources\remove.ico" />
