@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{2ACC03C5-7CD5-4CBE-A862-984EAA871882}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>CKBL2_GIS.My.MyApplication</StartupObject>
+    <RootNamespace>CKBL2_GIS</RootNamespace>
+    <AssemblyName>CKBL2-GIS</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <ApplicationIcon>computer_on.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>CKBL2-GIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>CKBL2-GIS.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="C1.Win.C1FlexGrid.2, Version=2.6.20092.416, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="clsDB.vb" />
+    <Compile Include="clsFileControl.vb" />
+    <Compile Include="clsSecurity.vb" />
+    <Compile Include="clsTools.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMain.Designer.vb">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmMain.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="mdlTool.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMain.resx">
+      <DependentUpon>frmMain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Shape\cities_capital_pt.dbf" />
+    <None Include="Shape\cities_capital_pt.lbl" />
+    <None Include="Shape\cities_capital_pt.mwsr" />
+    <None Include="Shape\cities_capital_pt.prj" />
+    <None Include="Shape\cities_capital_pt.shp" />
+    <None Include="Shape\cities_capital_pt.shx" />
+    <None Include="Shape\latlong.dbf" />
+    <None Include="Shape\latlong.mwsr" />
+    <None Include="Shape\latlong.prj" />
+    <None Include="Shape\latlong.shp" />
+    <None Include="Shape\latlong.shx" />
+    <None Include="Shape\river_quality_li.dbf" />
+    <None Include="Shape\river_quality_li.lbl" />
+    <None Include="Shape\river_quality_li.mwsr" />
+    <None Include="Shape\river_quality_li.prj" />
+    <None Include="Shape\river_quality_li.shp" />
+    <None Include="Shape\river_quality_li.shx" />
+    <None Include="Shape\states.chart" />
+    <None Include="Shape\states.dbf" />
+    <None Include="Shape\states.lbl" />
+    <None Include="Shape\states.mwsr" />
+    <None Include="Shape\states.prj" />
+    <None Include="Shape\states.shp" />
+    <None Include="Shape\states.shx" />
+    <None Include="Shape\wilderness_areas.dbf" />
+    <None Include="Shape\wilderness_areas.mwsr" />
+    <None Include="Shape\wilderness_areas.prj" />
+    <None Include="Shape\wilderness_areas.shp" />
+    <None Include="Shape\wilderness_areas.shx" />
+    <None Include="Shape\World.dbf" />
+    <None Include="Shape\World.shp" />
+    <None Include="Shape\World.shx" />
+    <None Include="Shape\WORLD30.DBF" />
+    <None Include="Shape\WORLD30.mwsr" />
+    <None Include="Shape\WORLD30.prj" />
+    <None Include="Shape\WORLD30.SHP" />
+    <None Include="Shape\WORLD30.SHX" />
+    <None Include="Shape\world_adm0.dbf" />
+    <None Include="Shape\world_adm0.lbl" />
+    <None Include="Shape\world_adm0.mwsr" />
+    <None Include="Shape\world_adm0.prj" />
+    <None Include="Shape\world_adm0.shp" />
+    <None Include="Shape\world_adm0.shx" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AxMapWinGIS">
+      <Guid>{C368D713-CC5F-40ED-9F53-F84FE197B96A}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="MapWinGIS">
+      <Guid>{C368D713-CC5F-40ED-9F53-F84FE197B96A}</Guid>
+      <VersionMajor>4</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="computer_on.ico" />
+    <Content Include="Shape\Home.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

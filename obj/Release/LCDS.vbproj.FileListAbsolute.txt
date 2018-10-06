@@ -1,0 +1,41 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\bin\Release\LCDS.exe.config
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\bin\Release\LCDS.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\bin\Release\LCDS.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\bin\Release\LCDS.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\bin\Release\C1.Win.C1FlexGrid.2.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\bin\Release\C1.Win.C1FlexGrid.2.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\bin\Release\Interop.Office.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\bin\Release\Interop.VBIDE.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\Interop.Office.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\Interop.VBIDE.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.vbproj.ResolveComReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.frmEditProposal.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.frmEditURL.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.frmLayoutLaw.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.frmMarketValue.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.frmAssignJob.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.frmApprove.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.frmCheckList.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.frmEditInvoice.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.frmEditPercent.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.frmEditRecive.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.frmProposal.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.frmRecive.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.Form1.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.frmInvoice.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.frmLogin.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.frmMain.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.frmURL.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.exe.licenses
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Release\LCDS.pdb
+D:\Landmark\LCDS\LCDS\obj\Release\LCDS.vbprojAssemblyReference.cache
+D:\Landmark\LCDS\LCDS\obj\Release\Interop.Microsoft.Office.Core.dll
+D:\Landmark\LCDS\LCDS\obj\Release\Interop.VBIDE.dll
+D:\Landmark\LCDS\LCDS\obj\Release\LCDS.exe
+D:\Landmark\LCDS\LCDS\obj\Release\LCDS.xml
+D:\Landmark\LCDS\LCDS\obj\Release\LCDS.pdb

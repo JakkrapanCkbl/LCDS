@@ -1,0 +1,50 @@
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\bin\Debug\LCDS.exe.config
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\bin\Debug\LCDS.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\bin\Debug\LCDS.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\bin\Debug\LCDS.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\bin\Debug\C1.Win.C1FlexGrid.2.dll
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\bin\Debug\C1.Win.C1FlexGrid.2.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Debug\LCDS.frmLogin.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Debug\LCDS.frmMain.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Debug\LCDS.Resources.resources
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Debug\LCDS.vbproj.GenerateResource.Cache
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Debug\LCDS.exe.licenses
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Debug\LCDS.exe
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Debug\LCDS.xml
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Debug\LCDS.pdb
+C:\Documents and Settings\Administrator\My Documents\Visual Studio 2008\Projects\LCDS\LCDS\obj\Debug\LCDS.Form1.resources
+D:\Landmark\LCDS\LCDS\bin\Debug\LCDS.exe.config
+D:\Landmark\LCDS\LCDS\bin\Debug\LCDS.exe
+D:\Landmark\LCDS\LCDS\bin\Debug\LCDS.pdb
+D:\Landmark\LCDS\LCDS\bin\Debug\LCDS.xml
+D:\Landmark\LCDS\LCDS\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
+D:\Landmark\LCDS\LCDS\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.vbprojAssemblyReference.cache
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.vbproj.ResolveComReference.cache
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmEditProposal.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmEditURL.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmLayoutLaw.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmMarketValue.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmAssignJob.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmApprove.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmCheckList.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmEditInvoice.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmEditPercent.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmEditRecive.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmProposal.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmQboard.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmRecive.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.Form1.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmInvoice.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmLogin.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmMain.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmURL.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.Resources.resources
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.vbproj.GenerateResource.cache
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.exe.licenses
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.vbproj.CoreCompileInputs.cache
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.vbproj.CopyComplete
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.exe
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.xml
+D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.pdb
