@@ -10,7 +10,7 @@ Public Class frmEditURL
     Dim objDB As New clsDB
 
     Private Sub frmEditURL_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        'BindingcboPropertyType()
+        BindingcboPropertyType()
         BindingcboProvinceID()
 
         If v_FormMode = "Add" Then
@@ -228,5 +228,11 @@ Public Class frmEditURL
         'BindingcboTumbonID(cboAmphoeID.SelectedValue)
     End Sub
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
+    End Sub
+
+    Private Sub cboPropertyTypeID_SelectedIndexChanged(sender As Object, e As EventArgs) Handles cboPropertyTypeID.SelectedIndexChanged
+
+    End Sub
 End Class

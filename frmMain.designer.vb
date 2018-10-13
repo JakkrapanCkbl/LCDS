@@ -289,6 +289,7 @@ Partial Class frmMain
         Me.ToolStripButton2.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal
         Me.ToolStripButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
         Me.ToolStripButton2.ToolTipText = "Register Document Out"
+        Me.ToolStripButton2.Visible = False
         '
         'ToolStripButton3
         '

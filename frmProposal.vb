@@ -22,7 +22,7 @@ Public Class frmProposal
         Dim conStr As New SqlClient.SqlConnection
         conStr.ConnectionString = objDB.strConn
         Dim strsql As String = ""
-        strsql = "Select * from vw_ProposalList "
+        strsql = "Select top 10 * from vw_ProposalList "
         strsql += wc
         strsql += "Order by ProposalDate_1 desc "
         Dim ColAll As Integer = 9
@@ -78,4 +78,12 @@ Public Class frmProposal
         frmEditProposal.v_frmMode = "Add"
         frmEditProposal.ShowDialog()
     End Sub
+
+    Private Sub fg_Click(sender As Object, e As EventArgs) Handles fg.Click
+        frmEditProposal.v_frmMode = "Edit"
+        frmEditProposal.v_ID = fg(fg.Row, 1).ToString
+        frmEditProposal.txtID.Text = fg(fg.Row, 2).ToString
+        frmEditProposal.ShowDialog()
+    End Sub
+
 End Class

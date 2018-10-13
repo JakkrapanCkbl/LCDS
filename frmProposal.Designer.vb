@@ -23,14 +23,14 @@ Partial Class frmProposal
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmProposal))
-        Me.fg = New C1.Win.C1FlexGrid.C1FlexGrid
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.dtp2 = New System.Windows.Forms.DateTimePicker
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.dtp1 = New System.Windows.Forms.DateTimePicker
-        Me.chkMode = New System.Windows.Forms.CheckBox
-        Me.lblSample = New System.Windows.Forms.Label
-        Me.cmdAdd = New System.Windows.Forms.Button
+        Me.fg = New C1.Win.C1FlexGrid.C1FlexGrid()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.dtp2 = New System.Windows.Forms.DateTimePicker()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.dtp1 = New System.Windows.Forms.DateTimePicker()
+        Me.chkMode = New System.Windows.Forms.CheckBox()
+        Me.lblSample = New System.Windows.Forms.Label()
+        Me.cmdAdd = New System.Windows.Forms.Button()
         CType(Me.fg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -38,8 +38,8 @@ Partial Class frmProposal
         '
         Me.fg.AllowFreezing = C1.Win.C1FlexGrid.AllowFreezingEnum.Both
         Me.fg.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.fg.AutoGenerateColumns = False
         Me.fg.AutoResize = False
         Me.fg.ColumnInfo = resources.GetString("fg.ColumnInfo")
