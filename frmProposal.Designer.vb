@@ -31,6 +31,7 @@ Partial Class frmProposal
         Me.chkMode = New System.Windows.Forms.CheckBox()
         Me.lblSample = New System.Windows.Forms.Label()
         Me.cmdAdd = New System.Windows.Forms.Button()
+        Me.cmdDelete = New System.Windows.Forms.Button()
         CType(Me.fg, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -119,11 +120,22 @@ Partial Class frmProposal
         Me.cmdAdd.Text = "Add"
         Me.cmdAdd.UseVisualStyleBackColor = True
         '
+        'cmdDelete
+        '
+        Me.cmdDelete.ForeColor = System.Drawing.Color.Red
+        Me.cmdDelete.Location = New System.Drawing.Point(1061, 14)
+        Me.cmdDelete.Name = "cmdDelete"
+        Me.cmdDelete.Size = New System.Drawing.Size(76, 38)
+        Me.cmdDelete.TabIndex = 77
+        Me.cmdDelete.Text = "Delete"
+        Me.cmdDelete.UseVisualStyleBackColor = True
+        '
         'frmProposal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1284, 746)
+        Me.Controls.Add(Me.cmdDelete)
         Me.Controls.Add(Me.cmdAdd)
         Me.Controls.Add(Me.lblSample)
         Me.Controls.Add(Me.Label2)
@@ -150,4 +162,5 @@ Partial Class frmProposal
     Friend WithEvents chkMode As System.Windows.Forms.CheckBox
     Friend WithEvents lblSample As System.Windows.Forms.Label
     Friend WithEvents cmdAdd As System.Windows.Forms.Button
+    Friend WithEvents cmdDelete As Button
 End Class

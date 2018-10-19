@@ -17,18 +17,39 @@ Public Class frmEditProposal
         Call BindingcboPropertyType()
         Call BindingcboPropertyTypeDetailID(cboPropertyTypeID.SelectedValue)
         Call BindingcboProvinceID()
+        'Call BindingcboAmphoeID(cboProvinceID.SelectedValue)
+        'Call BindingcboTumbonID(cboAmphoeID.SelectedValue)
+
+        Call BindingcboStaff()
+        Call BindingcboStaff1()
+        Call BindingcboStaff2()
 
         chkNotFirstOpen.Checked = True
         If v_frmMode = "Add" Then
+            Panel3.Visible = False
             Me.Text = "ทำใบเสนองาน (Add New Proposal)"
+            dtpProposalDate.Checked = True
             dtpProposalDate.Value = Today
+            dtpInspectionDate.Value = Today
+            dtpDueDate.Value = Today
+            dtpDueDate1.Value = Today
             txtProposalID.Text = "LC/L0000/56"
-
+            txtAddress.Text = ""
+            txtSoi.Text = ""
+            txtRoad.Text = ""
+            txtRai.Text = "0"
+            txtNgan.Text = "0"
+            txtSqWah.Text = "0"
+            txtSqMeter.Text = "0"
+            txtCusName2.Text = ""
+            txtAddress2.Text = ""
 
         ElseIf v_frmMode = "Edit" Then
+
             Call BindingData()
             Call BindingProDetail()
-
+            Call BindingAJ()
+            Panel3.Visible = True
         End If
     End Sub
 
@@ -91,16 +112,18 @@ Public Class frmEditProposal
                     txtSoi.Text = dr.Item("Soi").ToString
                     txtRoad.Text = dr.Item("Road").ToString
                     cboProvinceID.SelectedValue = dr.Item("ProvinceID").ToString
+                    'Button1.PerformClick()
+                    BindingcboAmphoeID(dr.Item("ProvinceID").ToString)
                     cboAmphoeID.SelectedValue = dr.Item("AmphoeID").ToString
+                    BindingcboTumbonID(dr.Item("AmphoeID").ToString)
                     cboTumbonID.SelectedValue = dr.Item("TumbonID").ToString
                     cboPropertyTypeID.SelectedValue = dr.Item("PropertyTypeID").ToString
+                    Call BindingcboPropertyTypeDetailID(dr.Item("PropertyTypeID").ToString)
                     cboPropertyTypeDetailID.SelectedValue = dr.Item("PropertyTypeDetailID").ToString
                     txtRai.Text = dr.Item("Rai").ToString
                     txtNgan.Text = dr.Item("Ngan").ToString
                     txtSqWah.Text = dr.Item("SqWah").ToString
                     txtSqMeter.Text = dr.Item("SqMeter").ToString
-
-
 
                 End While
             End If
@@ -111,6 +134,45 @@ Public Class frmEditProposal
         End Try
     End Sub
 
+
+    Private Sub BindingAJ()
+        Dim conStr As New SqlClient.SqlConnection
+        conStr.ConnectionString = objDB.strConn
+        Dim strsql As String
+
+        Try
+            strsql = "SELECT P_CodeID, ProjectType, JobSize, InspectionDate_1, DueDate_1, "
+            strsql += "DueDate1_1, LandStaff, Appraisor1, Appraisor2 "
+            strsql += "FROM OrderSheet "
+            strsql += "WHERE ProposalID = '" & v_ID & "' "
+
+            conStr.Open()
+            Dim comm As New SqlCommand(strsql, conStr)
+            Dim dr As SqlDataReader = comm.ExecuteReader
+            If dr.HasRows Then
+                While dr.Read
+
+                    txtRcode.Text = dr.Item("P_CodeID").ToString
+                    cboProjectType.Text = dr.Item("ProjectType").ToString
+                    dtpInspectionDate.Checked = True
+                    dtpInspectionDate.Value = dr.Item("InspectionDate_1")
+                    dtpDueDate.Checked = True
+                    dtpDueDate.Value = dr.Item("DueDate_1")
+                    dtpDueDate1.Checked = True
+                    dtpDueDate1.Value = dr.Item("DueDate1_1")
+                    cboLandStaff.SelectedValue = dr.Item("LandStaff").ToString
+                    cboAppraisor1.SelectedValue = dr.Item("Appraisor1").ToString
+                    cboAppraisor2.SelectedValue = dr.Item("Appraisor2").ToString
+
+
+                End While
+            End If
+            dr.Close()
+            conStr.Close()
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
 
     'Private Sub BindingcboBR()
     '    Dim conStr As New SqlClient.SqlConnection
@@ -407,6 +469,116 @@ Public Class frmEditProposal
                         MsgBox("Error Insert Proposal Detail")
                         Exit Sub
                     End If
+                    'Insert Assign Job
+                    strsql = "INSERT INTO OrderSheet "
+                    strsql += "(OrderSheetID, OrderDate, OrderDate_1, ProjectType, ProposalID, "
+                    strsql += "P_ReportID, P_CodeID, ReportCustomer, ClientCustomer, StartDate, "
+                    strsql += "StartDate_1, InspectionDate, InspectionDate_1, ProofDate, ProofDate_1, "
+                    strsql += "DueDate, DueDate_1, DueDate1, DueDate1_1, ReportActual, "
+                    strsql += "LandStaff, Appraisor1, Appraisor2, LandActual, KeyValuer, "
+                    strsql += "JobSize, ModifiedBy, ModifiedDate) "
+                    strsql += "Values ("
+                    strsql += "'" & txtProposalID.Text & "', "
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
+                    strsql += "'" & cboProjectType.Text & "', "
+                    strsql += "'" & txtProposalID.Text & "', "
+
+                    strsql += "'" & txtProposalID.Text & "', "
+                    strsql += "'" & txtRcode.Text & "', "
+                    strsql += "'" & cboReportCustomer.SelectedValue & "', "
+                    strsql += "'" & cboClientCustomer.SelectedValue & "', "
+                    'startdate
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
+
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
+                    'inspectiondate
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day + 1, "00") & "', "
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day + 1, "00") & "', "
+                    'proofdate
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day + 1, "00") & "', "
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day + 1, "00") & "', "
+
+                    'DueDate
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day + 2, "00") & "', "
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day + 2, "00") & "', "
+                    'DueDate1
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day + 2, "00") & "', "
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day + 2, "00") & "', "
+                    strsql += "'2', "
+
+                    strsql += "'" & cboLandStaff.SelectedValue & "', "
+                    strsql += "'" & cboAppraisor1.SelectedValue & "', "
+                    strsql += "'" & cboAppraisor2.SelectedValue & "', "
+                    strsql += "'2', "
+                    strsql += "'" & cboLandStaff.SelectedValue & "', "
+
+
+                    strsql += "'" & cboJobSize.Text & "', "
+                    strsql += "'" & v_UserName & "', "
+                    strsql += "getdate())"
+
+                    If Not objDB.funExecuteNonQuery(strsql) Then
+                        MsgBox("Error Insert OrderSheet")
+                        Exit Sub
+                    End If
+
+                    'Insert Report
+                    strsql = "INSERT INTO P_Report (P_ReportID, P_ReportDate, P_ReportDate_1, OrderSheetID, StartDate, "
+                    strsql += "StartDate_1, InspectionDate, InspectionDate_1, ProofDate, ProofDate_1, "
+                    strsql += "DueDate, DueDate_1, DueDate1, DueDate1_1, PercentTask, "
+                    strsql += "ModifiedBy, ModifiedDate) "
+                    strsql += "Values ("
+                    strsql += "'" & txtProposalID.Text & "', "
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
+                    strsql += "'" & txtProposalID.Text & "', "
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
+                    'inspectiondate
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day + 1, "00") & "', "
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day + 1, "00") & "', "
+                    'proofdate
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day + 1, "00") & "', "
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day + 1, "00") & "', "
+                    'DueDate
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day + 2, "00") & "', "
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day + 2, "00") & "', "
+                    'DueDate1
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day + 2, "00") & "', "
+                    strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day + 2, "00") & "', "
+                    strsql += "'0', "
+                    strsql += "'" & v_UserName & "', "
+                    strsql += "getdate()) "
+                    If Not objDB.funExecuteNonQuery(strsql) Then
+                        MsgBox("Error Insert P_Report")
+                        Exit Sub
+                    End If
+
+                    strsql = "INSERT INTO P_ReportDetail "
+                    strsql += "(P_ReportID, ItemNo, ProposalID, PropertyNo, ObjectiveID, "
+                    strsql += "Address, Soi, Road, ProvinceID, AmphoeID, "
+                    strsql += "TumbonID, ModifiedBy,ModifiedDate) "
+                    strsql += "Values ("
+                    strsql += "'" & txtProposalID.Text & "', "
+                    strsql += "'1', "
+                    strsql += "'" & txtProposalID.Text & "', "
+                    strsql += "'1', "
+                    strsql += "'" & cboObjectiveID.SelectedValue & "', "
+                    strsql += "'" & txtAddress.Text & "', "
+                    strsql += "'" & txtSoi.Text & "', "
+                    strsql += "'" & txtRoad.Text & "', "
+                    strsql += "'" & cboProvinceID.SelectedValue & "', "
+                    strsql += "'" & cboAmphoeID.SelectedValue & "', "
+                    strsql += "'" & cboTumbonID.SelectedValue & "', "
+                    strsql += "'" & v_UserName & "', "
+                    strsql += "getdate()) "
+                    If Not objDB.funExecuteNonQuery(strsql) Then
+                        MsgBox("Error Insert P_ReportDetail")
+                        Exit Sub
+                    End If
+
+
                     v_frmMode = "Edit"
                     MsgBox("Save completed")
 
@@ -426,7 +598,7 @@ Public Class frmEditProposal
                         MsgBox("Error Update Proposal")
                         Exit Sub
                     End If
-                    'Prop Detail
+                    'update Proposal Detail
                     strsql = "UPDATE ProposalDetail Set "
                     strsql += "ObjectiveID = '" & cboObjectiveID.SelectedValue & "', "
                     strsql += "PropertyTypeID = '" & cboPropertyTypeID.SelectedValue & "', "
@@ -446,6 +618,72 @@ Public Class frmEditProposal
                     strsql += "Where ProposalID = '" & txtProposalID.Text & "' "
                     If Not objDB.funExecuteNonQuery(strsql) Then
                         MsgBox("Error Update Proposal Detail")
+                        Exit Sub
+                    End If
+                    'Edit Assign Job                
+                    strsql = "UPDATE OrderSheet Set "
+                    strsql += "OrderDate = '" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
+                    strsql += "OrderDate_1 = '" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
+                    strsql += "ProjectType = '" & cboProjectType.Text & "', "
+                    strsql += "P_CodeID = '" & txtRcode.Text & "', "
+                    strsql += "ReportCustomer = '" & cboReportCustomer.SelectedValue & "', "
+                    strsql += "ClientCustomer = '" & cboClientCustomer.SelectedValue & "', "
+                    strsql += "StartDate = '" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
+                    strsql += "StartDate_1 = '" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
+                    strsql += "InspectionDate = '" & Format(dtpInspectionDate.Value.Year, "0000") & Format(dtpInspectionDate.Value.Month, "00") & Format(dtpInspectionDate.Value.Day, "00") & "', "
+                    strsql += "InspectionDate_1 = '" & Format(dtpInspectionDate.Value.Year, "0000") & Format(dtpInspectionDate.Value.Month, "00") & Format(dtpInspectionDate.Value.Day, "00") & "', "
+                    strsql += "DueDate = '" & Format(dtpDueDate.Value.Year, "0000") & Format(dtpDueDate.Value.Month, "00") & Format(dtpDueDate.Value.Day, "00") & "', "
+                    strsql += "DueDate_1 = '" & Format(dtpDueDate.Value.Year, "0000") & Format(dtpDueDate.Value.Month, "00") & Format(dtpDueDate.Value.Day, "00") & "', "
+                    strsql += "DueDate1 = '" & Format(dtpDueDate1.Value.Year, "0000") & Format(dtpDueDate1.Value.Month, "00") & Format(dtpDueDate1.Value.Day, "00") & "', "
+                    strsql += "DueDate1_1 = '" & Format(dtpDueDate1.Value.Year, "0000") & Format(dtpDueDate1.Value.Month, "00") & Format(dtpDueDate1.Value.Day, "00") & "', "
+                    strsql += "LandStaff = '" & cboLandStaff.SelectedValue & "', "
+                    strsql += "Appraisor1 = '" & cboAppraisor1.SelectedValue & "', "
+                    strsql += "Appraisor2 = '" & cboAppraisor2.SelectedValue & "', "
+                    strsql += "JobSize = '" & cboJobSize.Text & "', "
+                    strsql += "ModifiedBy = '" & v_UserName & "', "
+                    strsql += "ModifiedDate = getdate() "
+                    strsql += "Where ProposalID = '" & txtProposalID.Text & "' "
+                    If Not objDB.funExecuteNonQuery(strsql) Then
+                        MsgBox("Error Update Order Sheet")
+                        Exit Sub
+                    End If
+
+                    'Edit Report
+
+                    strsql = "UPDATE P_Report Set "
+                    strsql += "P_ReportDate = '" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
+                    strsql += "P_ReportDate_1 = '" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
+                    strsql += "StartDate = '" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
+                    strsql += "StartDate_1 = '" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
+                    strsql += "InspectionDate = '" & Format(dtpInspectionDate.Value.Year, "0000") & Format(dtpInspectionDate.Value.Month, "00") & Format(dtpInspectionDate.Value.Day, "00") & "', "
+                    strsql += "InspectionDate_1 = '" & Format(dtpInspectionDate.Value.Year, "0000") & Format(dtpInspectionDate.Value.Month, "00") & Format(dtpInspectionDate.Value.Day, "00") & "', "
+                    strsql += "DueDate = '" & Format(dtpDueDate.Value.Year, "0000") & Format(dtpDueDate.Value.Month, "00") & Format(dtpDueDate.Value.Day, "00") & "', "
+                    strsql += "DueDate_1 = '" & Format(dtpDueDate.Value.Year, "0000") & Format(dtpDueDate.Value.Month, "00") & Format(dtpDueDate.Value.Day, "00") & "', "
+                    strsql += "DueDate1 = '" & Format(dtpDueDate1.Value.Year, "0000") & Format(dtpDueDate1.Value.Month, "00") & Format(dtpDueDate1.Value.Day, "00") & "', "
+                    strsql += "DueDate1_1 = '" & Format(dtpDueDate1.Value.Year, "0000") & Format(dtpDueDate1.Value.Month, "00") & Format(dtpDueDate1.Value.Day, "00") & "', "
+                    strsql += "ModifiedBy = '" & v_UserName & "', "
+                    strsql += "ModifiedDate = getdate() "
+                    strsql += "Where P_ReportID = '" & txtProposalID.Text & "' "
+                    If Not objDB.funExecuteNonQuery(strsql) Then
+                        MsgBox("Error Update P_Report")
+                        Exit Sub
+                    End If
+
+                    'Edit ReportDetail
+
+                    strsql = "UPDATE P_ReportDetail Set "
+                        strsql += "ObjectiveID = '" & 1 & "', "
+                    strsql += "Address = '" & txtAddress.Text & "', "
+                    strsql += "Soi = '" & txtSoi.Text & "', "
+                    strsql += "Road = '" & txtRoad.Text & "', "
+                    strsql += "ProvinceID = '" & cboProvinceID.SelectedValue & "', "
+                    strsql += "AmphoeID = '" & cboAmphoeID.SelectedValue & "', "
+                    strsql += "TumbonID = '" & cboTumbonID.SelectedValue & "', "
+                    strsql += "ModifiedBy = '" & v_UserName & "', "
+                    strsql += "ModifiedDate = getdate() "
+                    strsql += "Where P_ReportID = '" & txtProposalID.Text & "' "
+                    If Not objDB.funExecuteNonQuery(strsql) Then
+                        MsgBox("Error Update P_Report Detail")
                         Exit Sub
                     End If
                     MsgBox("Save completed")
@@ -478,6 +716,82 @@ Public Class frmEditProposal
         End Try
     End Sub
 
+    Private Sub BindingcboStaff()
+        Dim conStr As New SqlClient.SqlConnection
+        conStr.ConnectionString = objDB.strConn
+        Dim strsql As String
+        Try
+            strsql = "Select EmployeeID, ShowName From vwShowEmpName Order by EmployeeID "
+            conStr.Open()
+            Dim myDa As New SqlDataAdapter(strsql, conStr)
+            Dim myDs As New DataSet
+            myDa.Fill(myDs, "vwShowEmpName")
+            cboLandStaff.DataSource = myDs.Tables("vwShowEmpName")
+            cboLandStaff.ValueMember = "EmployeeID"
+            cboLandStaff.DisplayMember = "ShowName"
+            cboLandStaff.SelectedIndex = 4
+
+
+
+            conStr.Close()
+            myDs = Nothing
+            myDa = Nothing
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub BindingcboStaff1()
+        Dim conStr As New SqlClient.SqlConnection
+        conStr.ConnectionString = objDB.strConn
+        Dim strsql As String
+        Try
+            strsql = "Select EmployeeID, ShowName From vwShowEmpName Order by EmployeeID "
+            conStr.Open()
+            Dim myDa As New SqlDataAdapter(strsql, conStr)
+            Dim myDs As New DataSet
+            myDa.Fill(myDs, "vwShowEmpName")
+
+
+            cboAppraisor1.DataSource = myDs.Tables("vwShowEmpName")
+            cboAppraisor1.ValueMember = "EmployeeID"
+            cboAppraisor1.DisplayMember = "ShowName"
+            cboAppraisor1.SelectedIndex = 2
+
+
+            conStr.Close()
+            myDs = Nothing
+            myDa = Nothing
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub BindingcboStaff2()
+        Dim conStr As New SqlClient.SqlConnection
+        conStr.ConnectionString = objDB.strConn
+        Dim strsql As String
+        Try
+            strsql = "Select EmployeeID, ShowName From vwShowEmpName Order by EmployeeID "
+            conStr.Open()
+            Dim myDa As New SqlDataAdapter(strsql, conStr)
+            Dim myDs As New DataSet
+            myDa.Fill(myDs, "vwShowEmpName")
+
+
+            cboAppraisor2.DataSource = myDs.Tables("vwShowEmpName")
+            cboAppraisor2.ValueMember = "EmployeeID"
+            cboAppraisor2.DisplayMember = "ShowName"
+            cboAppraisor2.SelectedIndex = 1
+
+
+            conStr.Close()
+            myDs = Nothing
+            myDa = Nothing
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
     Private Sub BindingcboAmphoeID(ByVal ProvinceID As String)
         Dim conStr As New SqlClient.SqlConnection
         conStr.ConnectionString = objDB.strConn
@@ -524,10 +838,7 @@ Public Class frmEditProposal
         End Try
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        BindingcboAmphoeID(cboProvinceID.SelectedValue)
 
-    End Sub
 
     Private Sub BindingcboPropertyType()
         Dim conStr As New SqlClient.SqlConnection
@@ -543,7 +854,7 @@ Public Class frmEditProposal
             cboPropertyTypeID.DataSource = myDs.Tables("vwTypeID")
             cboPropertyTypeID.ValueMember = "PropertyTypeID"
             cboPropertyTypeID.DisplayMember = "PropertyTypeT"
-            'cboPropertyTypeID.SelectedIndex = 0
+            cboPropertyTypeID.SelectedIndex = 1
             'cboPropertyTypeID.Text = "All"
             conStr.Close()
             myDs = Nothing
@@ -569,6 +880,7 @@ Public Class frmEditProposal
             cboPropertyTypeDetailID.DataSource = myDs.Tables("vwPropID")
             cboPropertyTypeDetailID.ValueMember = "PropertyTypeDetailID"
             cboPropertyTypeDetailID.DisplayMember = "PropertyDetailT"
+            cboPropertyTypeDetailID.SelectedIndex = 5
             conStr.Close()
             myDs = Nothing
             myDa = Nothing
@@ -593,4 +905,68 @@ Public Class frmEditProposal
 
         End Try
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        txtAddress2.Visible = False
+        Label21.Visible = True
+        Panel2.Visible = True
+        chkMode.Checked = True
+    End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        txtCusName2.Text = cboReportCustomer.Text
+        Label21.Visible = False
+        txtAddress2.Text = ""
+        txtAddress2.Visible = False
+        Panel2.Visible = True
+        chkMode.Checked = False
+    End Sub
+
+    Private Sub cmdSaveCus_Click(sender As Object, e As EventArgs) Handles cmdSaveCus.Click
+        Try
+            Dim strsql As String = ""
+
+            If chkMode.Checked Then
+                Dim newCusID As Integer
+                newCusID = CInt(NewID("Customer", "CustomerID"))
+                strsql = "INSERT INTO Customer "
+                strsql = strsql & "(CustomerID, CompanyTitleID, CustomerT, Address, "
+                strsql += "TumbonID, AmphoeID, ProvinceID) "
+                strsql = strsql & "Values ('" & newCusID & "', "
+                strsql = strsql & "'0', "
+                strsql = strsql & "'" & txtCusName2.Text & "', "
+                strsql = strsql & "'" & txtAddress2.Text & "', "
+                strsql += "'103103', '1031', '10') "
+
+            Else
+                strsql = "Update Customer Set "
+                strsql = strsql & "CustomerT = '" & txtCusName2.Text & "' "
+                strsql = strsql & "WHERE "
+                strsql = strsql & "CustomerID = '" & cboReportCustomer.SelectedValue & "'"
+            End If
+            If Not objDB.funExecuteNonQuery(strsql) Then
+                MsgBox("ไม่สามารถทำการบันทึกรายการได้ กรุณาตรวจสอบข้อมูล", MsgBoxStyle.Critical, "Error")
+                Exit Sub
+            End If
+            Call BindingcbocboReportCustomer()
+            MsgBox("Save Completed")
+            Panel2.Visible = False
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+    End Sub
+
+    Private Sub cmdCloseCus_Click(sender As Object, e As EventArgs) Handles cmdCloseCus.Click
+        Panel2.Visible = False
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        BindingcboAmphoeID(cboProvinceID.SelectedValue)
+    End Sub
+
+    Private Sub frmEditProposal_Closed(sender As Object, e As EventArgs) Handles Me.Closed
+        frmProposal.InitProposal()
+    End Sub
+
+
 End Class

@@ -28,7 +28,7 @@ Partial Class frmEditProposal
         Me.cmdKK = New System.Windows.Forms.Button()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.dtpProposalDate = New System.Windows.Forms.DateTimePicker()
-        Me.txtID = New System.Windows.Forms.TextBox()
+        Me.txtRcode = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.cboProposalCustomer = New System.Windows.Forms.ComboBox()
@@ -38,8 +38,6 @@ Partial Class frmEditProposal
         Me.cboClientCustomer = New System.Windows.Forms.ComboBox()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.cboReportCustomer = New System.Windows.Forms.ComboBox()
         Me.Label20 = New System.Windows.Forms.Label()
@@ -47,36 +45,66 @@ Partial Class frmEditProposal
         Me.Label25 = New System.Windows.Forms.Label()
         Me.txtRemark = New System.Windows.Forms.RichTextBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.Label26 = New System.Windows.Forms.Label()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.chkNotFirstOpen = New System.Windows.Forms.CheckBox()
-        Me.txtAddress = New System.Windows.Forms.TextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txtSoi = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.txtRoad = New System.Windows.Forms.TextBox()
-        Me.Label6 = New System.Windows.Forms.Label()
+        Me.Label17 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.txtSqMeter = New System.Windows.Forms.TextBox()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.txtSqWah = New System.Windows.Forms.TextBox()
+        Me.Label16 = New System.Windows.Forms.Label()
+        Me.txtNgan = New System.Windows.Forms.TextBox()
+        Me.Label15 = New System.Windows.Forms.Label()
+        Me.txtRai = New System.Windows.Forms.TextBox()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.cboPropertyTypeDetailID = New System.Windows.Forms.ComboBox()
+        Me.cboPropertyTypeID = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.Label8 = New System.Windows.Forms.Label()
         Me.cboAmphoeID = New System.Windows.Forms.ComboBox()
         Me.cboTumbonID = New System.Windows.Forms.ComboBox()
         Me.cboProvinceID = New System.Windows.Forms.ComboBox()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.cboPropertyTypeDetailID = New System.Windows.Forms.ComboBox()
-        Me.cboPropertyTypeID = New System.Windows.Forms.ComboBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.txtRai = New System.Windows.Forms.TextBox()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.txtNgan = New System.Windows.Forms.TextBox()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.txtSqWah = New System.Windows.Forms.TextBox()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.txtSqMeter = New System.Windows.Forms.TextBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Label17 = New System.Windows.Forms.Label()
+        Me.txtRoad = New System.Windows.Forms.TextBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtSoi = New System.Windows.Forms.TextBox()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.txtAddress = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Button12 = New System.Windows.Forms.Button()
+        Me.chkNotFirstOpen = New System.Windows.Forms.CheckBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Panel2 = New System.Windows.Forms.Panel()
+        Me.cmdCloseCus = New System.Windows.Forms.Button()
+        Me.cmdSaveCus = New System.Windows.Forms.Button()
+        Me.chkMode = New System.Windows.Forms.CheckBox()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.txtAddress2 = New System.Windows.Forms.RichTextBox()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.txtCusName2 = New System.Windows.Forms.TextBox()
+        Me.cboProjectType = New System.Windows.Forms.ComboBox()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.cboJobSize = New System.Windows.Forms.ComboBox()
+        Me.Label27 = New System.Windows.Forms.Label()
+        Me.cboLandStaff = New System.Windows.Forms.ComboBox()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.cboAppraisor1 = New System.Windows.Forms.ComboBox()
+        Me.Label29 = New System.Windows.Forms.Label()
+        Me.cboAppraisor2 = New System.Windows.Forms.ComboBox()
+        Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.dtpDueDate1 = New System.Windows.Forms.DateTimePicker()
+        Me.Label32 = New System.Windows.Forms.Label()
+        Me.dtpDueDate = New System.Windows.Forms.DateTimePicker()
+        Me.Label31 = New System.Windows.Forms.Label()
+        Me.dtpInspectionDate = New System.Windows.Forms.DateTimePicker()
+        Me.Label30 = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
+        Me.Panel2.SuspendLayout()
+        Me.Panel3.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label3
@@ -99,7 +127,7 @@ Partial Class frmEditProposal
         '
         'cmdLC
         '
-        Me.cmdLC.Location = New System.Drawing.Point(155, 8)
+        Me.cmdLC.Location = New System.Drawing.Point(155, 3)
         Me.cmdLC.Name = "cmdLC"
         Me.cmdLC.Size = New System.Drawing.Size(96, 24)
         Me.cmdLC.TabIndex = 6
@@ -108,7 +136,7 @@ Partial Class frmEditProposal
         '
         'cmdKK
         '
-        Me.cmdKK.Location = New System.Drawing.Point(257, 8)
+        Me.cmdKK.Location = New System.Drawing.Point(257, 3)
         Me.cmdKK.Name = "cmdKK"
         Me.cmdKK.Size = New System.Drawing.Size(105, 24)
         Me.cmdKK.TabIndex = 7
@@ -135,19 +163,19 @@ Partial Class frmEditProposal
         Me.dtpProposalDate.Size = New System.Drawing.Size(189, 20)
         Me.dtpProposalDate.TabIndex = 8
         '
-        'txtID
+        'txtRcode
         '
-        Me.txtID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtID.Location = New System.Drawing.Point(392, 36)
-        Me.txtID.Name = "txtID"
-        Me.txtID.Size = New System.Drawing.Size(112, 22)
-        Me.txtID.TabIndex = 11
+        Me.txtRcode.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtRcode.Location = New System.Drawing.Point(393, 36)
+        Me.txtRcode.Name = "txtRcode"
+        Me.txtRcode.Size = New System.Drawing.Size(112, 22)
+        Me.txtRcode.TabIndex = 11
         '
         'Label5
         '
         Me.Label5.AutoSize = True
         Me.Label5.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label5.Location = New System.Drawing.Point(365, 39)
+        Me.Label5.Location = New System.Drawing.Point(366, 39)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(21, 16)
         Me.Label5.TabIndex = 10
@@ -233,26 +261,6 @@ Partial Class frmEditProposal
         Me.Button7.Text = "..."
         Me.Button7.UseVisualStyleBackColor = True
         '
-        'Button8
-        '
-        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button8.Location = New System.Drawing.Point(537, 149)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(55, 24)
-        Me.Button8.TabIndex = 38
-        Me.Button8.Text = "Refresh"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
-        'Button9
-        '
-        Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Button9.Location = New System.Drawing.Point(510, 149)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(25, 24)
-        Me.Button9.TabIndex = 37
-        Me.Button9.Text = "..."
-        Me.Button9.UseVisualStyleBackColor = True
-        '
         'Label19
         '
         Me.Label19.AutoSize = True
@@ -270,7 +278,7 @@ Partial Class frmEditProposal
         Me.cboReportCustomer.FormattingEnabled = True
         Me.cboReportCustomer.Location = New System.Drawing.Point(155, 150)
         Me.cboReportCustomer.Name = "cboReportCustomer"
-        Me.cboReportCustomer.Size = New System.Drawing.Size(349, 24)
+        Me.cboReportCustomer.Size = New System.Drawing.Size(255, 24)
         Me.cboReportCustomer.TabIndex = 35
         '
         'Label20
@@ -342,10 +350,258 @@ Partial Class frmEditProposal
         Me.Panel1.Controls.Add(Me.txtAddress)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Controls.Add(Me.Label26)
-        Me.Panel1.Location = New System.Drawing.Point(616, 90)
+        Me.Panel1.Location = New System.Drawing.Point(627, 70)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(632, 300)
         Me.Panel1.TabIndex = 59
+        '
+        'Label17
+        '
+        Me.Label17.AutoSize = True
+        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label17.Location = New System.Drawing.Point(106, 259)
+        Me.Label17.Name = "Label17"
+        Me.Label17.Size = New System.Drawing.Size(31, 16)
+        Me.Label17.TabIndex = 103
+        Me.Label17.Text = "พื้นที่"
+        '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(358, 108)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(111, 22)
+        Me.Button1.TabIndex = 102
+        Me.Button1.Text = "โหลด อำเภอ+ตำบล"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'txtSqMeter
+        '
+        Me.txtSqMeter.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtSqMeter.Location = New System.Drawing.Point(143, 256)
+        Me.txtSqMeter.Name = "txtSqMeter"
+        Me.txtSqMeter.Size = New System.Drawing.Size(50, 22)
+        Me.txtSqMeter.TabIndex = 101
+        Me.txtSqMeter.Text = "0"
+        Me.txtSqMeter.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label18
+        '
+        Me.Label18.AutoSize = True
+        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label18.Location = New System.Drawing.Point(199, 259)
+        Me.Label18.Name = "Label18"
+        Me.Label18.Size = New System.Drawing.Size(60, 16)
+        Me.Label18.TabIndex = 100
+        Me.Label18.Text = "ตารางเมตร"
+        '
+        'txtSqWah
+        '
+        Me.txtSqWah.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtSqWah.Location = New System.Drawing.Point(324, 228)
+        Me.txtSqWah.Name = "txtSqWah"
+        Me.txtSqWah.Size = New System.Drawing.Size(50, 22)
+        Me.txtSqWah.TabIndex = 97
+        Me.txtSqWah.Text = "0"
+        Me.txtSqWah.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label16
+        '
+        Me.Label16.AutoSize = True
+        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label16.Location = New System.Drawing.Point(277, 230)
+        Me.Label16.Name = "Label16"
+        Me.Label16.Size = New System.Drawing.Size(48, 16)
+        Me.Label16.TabIndex = 96
+        Me.Label16.Text = "ตารางวา"
+        '
+        'txtNgan
+        '
+        Me.txtNgan.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtNgan.Location = New System.Drawing.Point(221, 228)
+        Me.txtNgan.Name = "txtNgan"
+        Me.txtNgan.Size = New System.Drawing.Size(50, 22)
+        Me.txtNgan.TabIndex = 95
+        Me.txtNgan.Text = "0"
+        Me.txtNgan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label15
+        '
+        Me.Label15.AutoSize = True
+        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label15.Location = New System.Drawing.Point(194, 230)
+        Me.Label15.Name = "Label15"
+        Me.Label15.Size = New System.Drawing.Size(26, 16)
+        Me.Label15.TabIndex = 94
+        Me.Label15.Text = "งาน"
+        '
+        'txtRai
+        '
+        Me.txtRai.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtRai.Location = New System.Drawing.Point(143, 228)
+        Me.txtRai.Name = "txtRai"
+        Me.txtRai.Size = New System.Drawing.Size(50, 22)
+        Me.txtRai.TabIndex = 93
+        Me.txtRai.Text = "0"
+        Me.txtRai.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label14
+        '
+        Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label14.Location = New System.Drawing.Point(110, 232)
+        Me.Label14.Name = "Label14"
+        Me.Label14.Size = New System.Drawing.Size(19, 16)
+        Me.Label14.TabIndex = 92
+        Me.Label14.Text = "ไร่"
+        '
+        'Label13
+        '
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label13.Location = New System.Drawing.Point(59, 201)
+        Me.Label13.Name = "Label13"
+        Me.Label13.Size = New System.Drawing.Size(78, 16)
+        Me.Label13.TabIndex = 91
+        Me.Label13.Text = "หมวดทรัพย์สิน"
+        '
+        'Label12
+        '
+        Me.Label12.AutoSize = True
+        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label12.Location = New System.Drawing.Point(50, 176)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(87, 16)
+        Me.Label12.TabIndex = 90
+        Me.Label12.Text = "ประเภททรัพย์สิน"
+        '
+        'cboPropertyTypeDetailID
+        '
+        Me.cboPropertyTypeDetailID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cboPropertyTypeDetailID.FormattingEnabled = True
+        Me.cboPropertyTypeDetailID.Location = New System.Drawing.Point(143, 198)
+        Me.cboPropertyTypeDetailID.Name = "cboPropertyTypeDetailID"
+        Me.cboPropertyTypeDetailID.Size = New System.Drawing.Size(460, 24)
+        Me.cboPropertyTypeDetailID.TabIndex = 89
+        '
+        'cboPropertyTypeID
+        '
+        Me.cboPropertyTypeID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cboPropertyTypeID.FormattingEnabled = True
+        Me.cboPropertyTypeID.Location = New System.Drawing.Point(143, 168)
+        Me.cboPropertyTypeID.Name = "cboPropertyTypeID"
+        Me.cboPropertyTypeID.Size = New System.Drawing.Size(460, 24)
+        Me.cboPropertyTypeID.TabIndex = 88
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label11.Location = New System.Drawing.Point(355, 141)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(33, 16)
+        Me.Label11.TabIndex = 87
+        Me.Label11.Text = "ตำบล"
+        '
+        'Label7
+        '
+        Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label7.Location = New System.Drawing.Point(102, 141)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(35, 16)
+        Me.Label7.TabIndex = 86
+        Me.Label7.Text = "อำเภอ"
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label8.Location = New System.Drawing.Point(96, 111)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(41, 16)
+        Me.Label8.TabIndex = 85
+        Me.Label8.Text = "จังหวัด"
+        '
+        'cboAmphoeID
+        '
+        Me.cboAmphoeID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cboAmphoeID.FormattingEnabled = True
+        Me.cboAmphoeID.Location = New System.Drawing.Point(143, 138)
+        Me.cboAmphoeID.Name = "cboAmphoeID"
+        Me.cboAmphoeID.Size = New System.Drawing.Size(209, 24)
+        Me.cboAmphoeID.TabIndex = 84
+        '
+        'cboTumbonID
+        '
+        Me.cboTumbonID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cboTumbonID.FormattingEnabled = True
+        Me.cboTumbonID.Location = New System.Drawing.Point(394, 135)
+        Me.cboTumbonID.Name = "cboTumbonID"
+        Me.cboTumbonID.Size = New System.Drawing.Size(209, 24)
+        Me.cboTumbonID.TabIndex = 83
+        '
+        'cboProvinceID
+        '
+        Me.cboProvinceID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cboProvinceID.FormattingEnabled = True
+        Me.cboProvinceID.Location = New System.Drawing.Point(143, 108)
+        Me.cboProvinceID.Name = "cboProvinceID"
+        Me.cboProvinceID.Size = New System.Drawing.Size(209, 24)
+        Me.cboProvinceID.TabIndex = 82
+        '
+        'txtRoad
+        '
+        Me.txtRoad.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtRoad.Location = New System.Drawing.Point(394, 79)
+        Me.txtRoad.Name = "txtRoad"
+        Me.txtRoad.Size = New System.Drawing.Size(209, 22)
+        Me.txtRoad.TabIndex = 81
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label6.Location = New System.Drawing.Point(355, 81)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(28, 16)
+        Me.Label6.TabIndex = 80
+        Me.Label6.Text = "ถนน"
+        '
+        'txtSoi
+        '
+        Me.txtSoi.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtSoi.Location = New System.Drawing.Point(143, 78)
+        Me.txtSoi.Name = "txtSoi"
+        Me.txtSoi.Size = New System.Drawing.Size(209, 22)
+        Me.txtSoi.TabIndex = 79
+        '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label2.Location = New System.Drawing.Point(110, 82)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(27, 16)
+        Me.Label2.TabIndex = 78
+        Me.Label2.Text = "ซอย"
+        '
+        'txtAddress
+        '
+        Me.txtAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtAddress.Location = New System.Drawing.Point(143, 48)
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.Size = New System.Drawing.Size(460, 22)
+        Me.txtAddress.TabIndex = 77
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label1.Location = New System.Drawing.Point(28, 51)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(109, 16)
+        Me.Label1.TabIndex = 76
+        Me.Label1.Text = "ชื่อโครงการ/บ้านเลขที่"
         '
         'Label26
         '
@@ -379,259 +635,308 @@ Partial Class frmEditProposal
         Me.chkNotFirstOpen.UseVisualStyleBackColor = True
         Me.chkNotFirstOpen.Visible = False
         '
-        'txtAddress
+        'Button2
         '
-        Me.txtAddress.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtAddress.Location = New System.Drawing.Point(143, 48)
-        Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(460, 22)
-        Me.txtAddress.TabIndex = 77
+        Me.Button2.Location = New System.Drawing.Point(511, 152)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(81, 22)
+        Me.Button2.TabIndex = 80
+        Me.Button2.Text = "แก้ไขชื่อลูกค้า"
+        Me.Button2.UseVisualStyleBackColor = True
         '
-        'Label1
+        'Button3
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label1.Location = New System.Drawing.Point(28, 51)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(109, 16)
-        Me.Label1.TabIndex = 76
-        Me.Label1.Text = "ชื่อโครงการ/บ้านเลขที่"
+        Me.Button3.Location = New System.Drawing.Point(416, 152)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(89, 22)
+        Me.Button3.TabIndex = 79
+        Me.Button3.Text = "เพิ่มชื่อลูกค้า"
+        Me.Button3.UseVisualStyleBackColor = True
         '
-        'txtSoi
+        'Panel2
         '
-        Me.txtSoi.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtSoi.Location = New System.Drawing.Point(143, 78)
-        Me.txtSoi.Name = "txtSoi"
-        Me.txtSoi.Size = New System.Drawing.Size(209, 22)
-        Me.txtSoi.TabIndex = 79
+        Me.Panel2.BackColor = System.Drawing.SystemColors.GradientActiveCaption
+        Me.Panel2.Controls.Add(Me.cmdCloseCus)
+        Me.Panel2.Controls.Add(Me.cmdSaveCus)
+        Me.Panel2.Controls.Add(Me.chkMode)
+        Me.Panel2.Controls.Add(Me.Label21)
+        Me.Panel2.Controls.Add(Me.txtAddress2)
+        Me.Panel2.Controls.Add(Me.Label22)
+        Me.Panel2.Controls.Add(Me.txtCusName2)
+        Me.Panel2.Location = New System.Drawing.Point(14, 142)
+        Me.Panel2.Name = "Panel2"
+        Me.Panel2.Size = New System.Drawing.Size(607, 135)
+        Me.Panel2.TabIndex = 81
+        Me.Panel2.Visible = False
         '
-        'Label2
+        'cmdCloseCus
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label2.Location = New System.Drawing.Point(110, 82)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(27, 16)
-        Me.Label2.TabIndex = 78
-        Me.Label2.Text = "ซอย"
+        Me.cmdCloseCus.Location = New System.Drawing.Point(387, 97)
+        Me.cmdCloseCus.Name = "cmdCloseCus"
+        Me.cmdCloseCus.Size = New System.Drawing.Size(68, 22)
+        Me.cmdCloseCus.TabIndex = 41
+        Me.cmdCloseCus.Text = "Close"
+        Me.cmdCloseCus.UseVisualStyleBackColor = True
         '
-        'txtRoad
+        'cmdSaveCus
         '
-        Me.txtRoad.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtRoad.Location = New System.Drawing.Point(394, 79)
-        Me.txtRoad.Name = "txtRoad"
-        Me.txtRoad.Size = New System.Drawing.Size(209, 22)
-        Me.txtRoad.TabIndex = 81
+        Me.cmdSaveCus.Location = New System.Drawing.Point(277, 97)
+        Me.cmdSaveCus.Name = "cmdSaveCus"
+        Me.cmdSaveCus.Size = New System.Drawing.Size(68, 22)
+        Me.cmdSaveCus.TabIndex = 40
+        Me.cmdSaveCus.Text = "Save"
+        Me.cmdSaveCus.UseVisualStyleBackColor = True
         '
-        'Label6
+        'chkMode
         '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label6.Location = New System.Drawing.Point(355, 81)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(28, 16)
-        Me.Label6.TabIndex = 80
-        Me.Label6.Text = "ถนน"
+        Me.chkMode.AutoSize = True
+        Me.chkMode.Location = New System.Drawing.Point(130, 97)
+        Me.chkMode.Name = "chkMode"
+        Me.chkMode.Size = New System.Drawing.Size(72, 17)
+        Me.chkMode.TabIndex = 39
+        Me.chkMode.Text = "ModeAdd"
+        Me.chkMode.UseVisualStyleBackColor = True
         '
-        'cboAmphoeID
+        'Label21
         '
-        Me.cboAmphoeID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.cboAmphoeID.FormattingEnabled = True
-        Me.cboAmphoeID.Location = New System.Drawing.Point(143, 138)
-        Me.cboAmphoeID.Name = "cboAmphoeID"
-        Me.cboAmphoeID.Size = New System.Drawing.Size(209, 24)
-        Me.cboAmphoeID.TabIndex = 84
+        Me.Label21.AutoSize = True
+        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label21.Location = New System.Drawing.Point(39, 47)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(28, 16)
+        Me.Label21.TabIndex = 38
+        Me.Label21.Text = "ที่อยู่"
         '
-        'cboTumbonID
+        'txtAddress2
         '
-        Me.cboTumbonID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.cboTumbonID.FormattingEnabled = True
-        Me.cboTumbonID.Location = New System.Drawing.Point(394, 135)
-        Me.cboTumbonID.Name = "cboTumbonID"
-        Me.cboTumbonID.Size = New System.Drawing.Size(209, 24)
-        Me.cboTumbonID.TabIndex = 83
+        Me.txtAddress2.Location = New System.Drawing.Point(73, 44)
+        Me.txtAddress2.Name = "txtAddress2"
+        Me.txtAddress2.Size = New System.Drawing.Size(504, 47)
+        Me.txtAddress2.TabIndex = 37
+        Me.txtAddress2.Text = ""
         '
-        'cboProvinceID
+        'Label22
         '
-        Me.cboProvinceID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.cboProvinceID.FormattingEnabled = True
-        Me.cboProvinceID.Location = New System.Drawing.Point(143, 108)
-        Me.cboProvinceID.Name = "cboProvinceID"
-        Me.cboProvinceID.Size = New System.Drawing.Size(209, 24)
-        Me.cboProvinceID.TabIndex = 82
+        Me.Label22.AutoSize = True
+        Me.Label22.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label22.Location = New System.Drawing.Point(22, 23)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(45, 16)
+        Me.Label22.TabIndex = 36
+        Me.Label22.Text = "ชื่อลูกค้า"
         '
-        'Label7
+        'txtCusName2
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label7.Location = New System.Drawing.Point(102, 141)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(35, 16)
-        Me.Label7.TabIndex = 86
-        Me.Label7.Text = "อำเภอ"
+        Me.txtCusName2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.txtCusName2.Location = New System.Drawing.Point(73, 20)
+        Me.txtCusName2.Name = "txtCusName2"
+        Me.txtCusName2.Size = New System.Drawing.Size(504, 22)
+        Me.txtCusName2.TabIndex = 35
         '
-        'Label8
+        'cboProjectType
         '
-        Me.Label8.AutoSize = True
-        Me.Label8.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label8.Location = New System.Drawing.Point(96, 111)
-        Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(41, 16)
-        Me.Label8.TabIndex = 85
-        Me.Label8.Text = "จังหวัด"
+        Me.cboProjectType.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cboProjectType.FormattingEnabled = True
+        Me.cboProjectType.Items.AddRange(New Object() {"KK", "LC"})
+        Me.cboProjectType.Location = New System.Drawing.Point(447, 4)
+        Me.cboProjectType.Name = "cboProjectType"
+        Me.cboProjectType.Size = New System.Drawing.Size(58, 24)
+        Me.cboProjectType.TabIndex = 82
+        Me.cboProjectType.Text = "KK"
         '
-        'Label11
+        'Label23
         '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label11.Location = New System.Drawing.Point(355, 141)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(33, 16)
-        Me.Label11.TabIndex = 87
-        Me.Label11.Text = "ตำบล"
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label23.Location = New System.Drawing.Point(378, 9)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(63, 16)
+        Me.Label23.TabIndex = 83
+        Me.Label23.Text = "ประเภทงาน"
         '
-        'cboPropertyTypeDetailID
+        'Label24
         '
-        Me.cboPropertyTypeDetailID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.cboPropertyTypeDetailID.FormattingEnabled = True
-        Me.cboPropertyTypeDetailID.Location = New System.Drawing.Point(143, 198)
-        Me.cboPropertyTypeDetailID.Name = "cboPropertyTypeDetailID"
-        Me.cboPropertyTypeDetailID.Size = New System.Drawing.Size(460, 24)
-        Me.cboPropertyTypeDetailID.TabIndex = 89
+        Me.Label24.AutoSize = True
+        Me.Label24.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label24.Location = New System.Drawing.Point(627, 382)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(183, 16)
+        Me.Label24.TabIndex = 87
+        Me.Label24.Text = "ขนาดของงาน HL, HL\NL, S, M, L "
         '
-        'cboPropertyTypeID
+        'cboJobSize
         '
-        Me.cboPropertyTypeID.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.cboPropertyTypeID.FormattingEnabled = True
-        Me.cboPropertyTypeID.Location = New System.Drawing.Point(143, 168)
-        Me.cboPropertyTypeID.Name = "cboPropertyTypeID"
-        Me.cboPropertyTypeID.Size = New System.Drawing.Size(460, 24)
-        Me.cboPropertyTypeID.TabIndex = 88
+        Me.cboJobSize.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cboJobSize.FormattingEnabled = True
+        Me.cboJobSize.Items.AddRange(New Object() {"HL", "HL\NL", "S", "M", "L"})
+        Me.cboJobSize.Location = New System.Drawing.Point(816, 379)
+        Me.cboJobSize.Name = "cboJobSize"
+        Me.cboJobSize.Size = New System.Drawing.Size(83, 24)
+        Me.cboJobSize.TabIndex = 86
+        Me.cboJobSize.Text = "HL"
         '
-        'Label12
+        'Label27
         '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label12.Location = New System.Drawing.Point(50, 176)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(87, 16)
-        Me.Label12.TabIndex = 90
-        Me.Label12.Text = "ประเภททรัพย์สิน"
+        Me.Label27.AutoSize = True
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label27.Location = New System.Drawing.Point(762, 417)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(42, 16)
+        Me.Label27.TabIndex = 89
+        Me.Label27.Text = "Head"
         '
-        'Label13
+        'cboLandStaff
         '
-        Me.Label13.AutoSize = True
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label13.Location = New System.Drawing.Point(59, 201)
-        Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(78, 16)
-        Me.Label13.TabIndex = 91
-        Me.Label13.Text = "หมวดทรัพย์สิน"
+        Me.cboLandStaff.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cboLandStaff.FormattingEnabled = True
+        Me.cboLandStaff.Location = New System.Drawing.Point(816, 409)
+        Me.cboLandStaff.Name = "cboLandStaff"
+        Me.cboLandStaff.Size = New System.Drawing.Size(210, 24)
+        Me.cboLandStaff.TabIndex = 88
         '
-        'txtRai
+        'Label28
         '
-        Me.txtRai.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtRai.Location = New System.Drawing.Point(143, 228)
-        Me.txtRai.Name = "txtRai"
-        Me.txtRai.Size = New System.Drawing.Size(50, 22)
-        Me.txtRai.TabIndex = 93
-        Me.txtRai.Text = "0"
-        Me.txtRai.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label28.Location = New System.Drawing.Point(736, 447)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(74, 16)
+        Me.Label28.TabIndex = 91
+        Me.Label28.Text = "Appraisor1"
         '
-        'Label14
+        'cboAppraisor1
         '
-        Me.Label14.AutoSize = True
-        Me.Label14.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label14.Location = New System.Drawing.Point(110, 232)
-        Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(19, 16)
-        Me.Label14.TabIndex = 92
-        Me.Label14.Text = "ไร่"
+        Me.cboAppraisor1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cboAppraisor1.FormattingEnabled = True
+        Me.cboAppraisor1.Location = New System.Drawing.Point(816, 439)
+        Me.cboAppraisor1.Name = "cboAppraisor1"
+        Me.cboAppraisor1.Size = New System.Drawing.Size(210, 24)
+        Me.cboAppraisor1.TabIndex = 90
         '
-        'txtNgan
+        'Label29
         '
-        Me.txtNgan.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtNgan.Location = New System.Drawing.Point(221, 228)
-        Me.txtNgan.Name = "txtNgan"
-        Me.txtNgan.Size = New System.Drawing.Size(50, 22)
-        Me.txtNgan.TabIndex = 95
-        Me.txtNgan.Text = "0"
-        Me.txtNgan.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.Label29.AutoSize = True
+        Me.Label29.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label29.Location = New System.Drawing.Point(736, 477)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(74, 16)
+        Me.Label29.TabIndex = 93
+        Me.Label29.Text = "Appraisor2"
         '
-        'Label15
+        'cboAppraisor2
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label15.Location = New System.Drawing.Point(194, 230)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(26, 16)
-        Me.Label15.TabIndex = 94
-        Me.Label15.Text = "งาน"
+        Me.cboAppraisor2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.cboAppraisor2.FormattingEnabled = True
+        Me.cboAppraisor2.Location = New System.Drawing.Point(816, 469)
+        Me.cboAppraisor2.Name = "cboAppraisor2"
+        Me.cboAppraisor2.Size = New System.Drawing.Size(210, 24)
+        Me.cboAppraisor2.TabIndex = 92
         '
-        'txtSqWah
+        'Panel3
         '
-        Me.txtSqWah.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtSqWah.Location = New System.Drawing.Point(324, 228)
-        Me.txtSqWah.Name = "txtSqWah"
-        Me.txtSqWah.Size = New System.Drawing.Size(50, 22)
-        Me.txtSqWah.TabIndex = 97
-        Me.txtSqWah.Text = "0"
-        Me.txtSqWah.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.Panel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Panel3.Controls.Add(Me.Label33)
+        Me.Panel3.Controls.Add(Me.dtpDueDate1)
+        Me.Panel3.Controls.Add(Me.Label32)
+        Me.Panel3.Controls.Add(Me.dtpDueDate)
+        Me.Panel3.Controls.Add(Me.Label31)
+        Me.Panel3.Controls.Add(Me.dtpInspectionDate)
+        Me.Panel3.Controls.Add(Me.Label30)
+        Me.Panel3.Location = New System.Drawing.Point(627, 519)
+        Me.Panel3.Name = "Panel3"
+        Me.Panel3.Size = New System.Drawing.Size(632, 172)
+        Me.Panel3.TabIndex = 94
+        Me.Panel3.Visible = False
         '
-        'Label16
+        'Label33
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label16.Location = New System.Drawing.Point(277, 230)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(48, 16)
-        Me.Label16.TabIndex = 96
-        Me.Label16.Text = "ตารางวา"
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label33.Location = New System.Drawing.Point(56, 95)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(112, 16)
+        Me.Label33.TabIndex = 37
+        Me.Label33.Text = "วันที่กำหนดส่งงาน LC"
         '
-        'txtSqMeter
+        'dtpDueDate1
         '
-        Me.txtSqMeter.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.txtSqMeter.Location = New System.Drawing.Point(143, 256)
-        Me.txtSqMeter.Name = "txtSqMeter"
-        Me.txtSqMeter.Size = New System.Drawing.Size(50, 22)
-        Me.txtSqMeter.TabIndex = 101
-        Me.txtSqMeter.Text = "0"
-        Me.txtSqMeter.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        Me.dtpDueDate1.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.dtpDueDate1.Checked = False
+        Me.dtpDueDate1.Location = New System.Drawing.Point(185, 91)
+        Me.dtpDueDate1.Name = "dtpDueDate1"
+        Me.dtpDueDate1.ShowCheckBox = True
+        Me.dtpDueDate1.Size = New System.Drawing.Size(189, 20)
+        Me.dtpDueDate1.TabIndex = 36
         '
-        'Label18
+        'Label32
         '
-        Me.Label18.AutoSize = True
-        Me.Label18.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label18.Location = New System.Drawing.Point(199, 259)
-        Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(60, 16)
-        Me.Label18.TabIndex = 100
-        Me.Label18.Text = "ตารางเมตร"
+        Me.Label32.AutoSize = True
+        Me.Label32.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label32.Location = New System.Drawing.Point(75, 69)
+        Me.Label32.Name = "Label32"
+        Me.Label32.Size = New System.Drawing.Size(93, 16)
+        Me.Label32.TabIndex = 35
+        Me.Label32.Text = "วันที่กำหนดส่งงาน"
         '
-        'Button1
+        'dtpDueDate
         '
-        Me.Button1.Location = New System.Drawing.Point(358, 108)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(111, 22)
-        Me.Button1.TabIndex = 102
-        Me.Button1.Text = "โหลด อำเภอ+ตำบล"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.dtpDueDate.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.dtpDueDate.Checked = False
+        Me.dtpDueDate.Location = New System.Drawing.Point(185, 65)
+        Me.dtpDueDate.Name = "dtpDueDate"
+        Me.dtpDueDate.ShowCheckBox = True
+        Me.dtpDueDate.Size = New System.Drawing.Size(189, 20)
+        Me.dtpDueDate.TabIndex = 34
         '
-        'Label17
+        'Label31
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label17.Location = New System.Drawing.Point(106, 259)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(31, 16)
-        Me.Label17.TabIndex = 103
-        Me.Label17.Text = "พื้นที่"
+        Me.Label31.AutoSize = True
+        Me.Label31.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label31.Location = New System.Drawing.Point(109, 40)
+        Me.Label31.Name = "Label31"
+        Me.Label31.Size = New System.Drawing.Size(59, 16)
+        Me.Label31.TabIndex = 33
+        Me.Label31.Text = "วันที่สำรวจ"
+        '
+        'dtpInspectionDate
+        '
+        Me.dtpInspectionDate.CalendarFont = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.dtpInspectionDate.Checked = False
+        Me.dtpInspectionDate.Location = New System.Drawing.Point(185, 39)
+        Me.dtpInspectionDate.Name = "dtpInspectionDate"
+        Me.dtpInspectionDate.ShowCheckBox = True
+        Me.dtpInspectionDate.Size = New System.Drawing.Size(189, 20)
+        Me.dtpInspectionDate.TabIndex = 32
+        '
+        'Label30
+        '
+        Me.Label30.AutoSize = True
+        Me.Label30.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
+        Me.Label30.Location = New System.Drawing.Point(3, 11)
+        Me.Label30.Name = "Label30"
+        Me.Label30.Size = New System.Drawing.Size(92, 25)
+        Me.Label30.TabIndex = 31
+        Me.Label30.Text = "แก้ไขวันที่"
         '
         'frmEditProposal
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1284, 746)
+        Me.Controls.Add(Me.Panel3)
+        Me.Controls.Add(Me.Label29)
+        Me.Controls.Add(Me.cboAppraisor2)
+        Me.Controls.Add(Me.Label28)
+        Me.Controls.Add(Me.cboAppraisor1)
+        Me.Controls.Add(Me.Label27)
+        Me.Controls.Add(Me.cboLandStaff)
+        Me.Controls.Add(Me.Label24)
+        Me.Controls.Add(Me.cboJobSize)
+        Me.Controls.Add(Me.Label23)
+        Me.Controls.Add(Me.cboProjectType)
+        Me.Controls.Add(Me.Panel2)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.chkNotFirstOpen)
         Me.Controls.Add(Me.Button12)
         Me.Controls.Add(Me.Panel1)
@@ -639,8 +944,6 @@ Partial Class frmEditProposal
         Me.Controls.Add(Me.txtRemark)
         Me.Controls.Add(Me.Label20)
         Me.Controls.Add(Me.cboObjectiveID)
-        Me.Controls.Add(Me.Button8)
-        Me.Controls.Add(Me.Button9)
         Me.Controls.Add(Me.Label19)
         Me.Controls.Add(Me.cboReportCustomer)
         Me.Controls.Add(Me.Button6)
@@ -651,7 +954,7 @@ Partial Class frmEditProposal
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Label9)
         Me.Controls.Add(Me.cboProposalCustomer)
-        Me.Controls.Add(Me.txtID)
+        Me.Controls.Add(Me.txtRcode)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.dtpProposalDate)
@@ -664,6 +967,10 @@ Partial Class frmEditProposal
         Me.Text = "frmEditProposal"
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
+        Me.Panel2.PerformLayout()
+        Me.Panel3.ResumeLayout(False)
+        Me.Panel3.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -674,7 +981,7 @@ Partial Class frmEditProposal
     Friend WithEvents cmdKK As System.Windows.Forms.Button
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents dtpProposalDate As System.Windows.Forms.DateTimePicker
-    Friend WithEvents txtID As System.Windows.Forms.TextBox
+    Friend WithEvents txtRcode As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents Label9 As System.Windows.Forms.Label
     Friend WithEvents cboProposalCustomer As System.Windows.Forms.ComboBox
@@ -684,8 +991,6 @@ Partial Class frmEditProposal
     Friend WithEvents cboClientCustomer As System.Windows.Forms.ComboBox
     Friend WithEvents Button6 As System.Windows.Forms.Button
     Friend WithEvents Button7 As System.Windows.Forms.Button
-    Friend WithEvents Button8 As System.Windows.Forms.Button
-    Friend WithEvents Button9 As System.Windows.Forms.Button
     Friend WithEvents Label19 As System.Windows.Forms.Label
     Friend WithEvents cboReportCustomer As System.Windows.Forms.ComboBox
     Friend WithEvents Label20 As System.Windows.Forms.Label
@@ -722,4 +1027,32 @@ Partial Class frmEditProposal
     Friend WithEvents Label1 As Label
     Friend WithEvents Button1 As Button
     Friend WithEvents Label17 As Label
+    Friend WithEvents Button2 As Button
+    Friend WithEvents Button3 As Button
+    Friend WithEvents Panel2 As Panel
+    Friend WithEvents cmdCloseCus As Button
+    Friend WithEvents cmdSaveCus As Button
+    Friend WithEvents chkMode As CheckBox
+    Friend WithEvents Label21 As Label
+    Friend WithEvents txtAddress2 As RichTextBox
+    Friend WithEvents Label22 As Label
+    Friend WithEvents txtCusName2 As TextBox
+    Friend WithEvents cboProjectType As ComboBox
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents cboJobSize As ComboBox
+    Friend WithEvents Label27 As Label
+    Friend WithEvents cboLandStaff As ComboBox
+    Friend WithEvents Label28 As Label
+    Friend WithEvents cboAppraisor1 As ComboBox
+    Friend WithEvents Label29 As Label
+    Friend WithEvents cboAppraisor2 As ComboBox
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents Label30 As Label
+    Friend WithEvents Label31 As Label
+    Friend WithEvents dtpInspectionDate As DateTimePicker
+    Friend WithEvents Label32 As Label
+    Friend WithEvents dtpDueDate As DateTimePicker
+    Friend WithEvents Label33 As Label
+    Friend WithEvents dtpDueDate1 As DateTimePicker
 End Class
