@@ -80,8 +80,6 @@ Partial Class frmEditProposal
         Me.cmdCloseCus = New System.Windows.Forms.Button()
         Me.cmdSaveCus = New System.Windows.Forms.Button()
         Me.chkMode = New System.Windows.Forms.CheckBox()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.txtAddress2 = New System.Windows.Forms.RichTextBox()
         Me.Label22 = New System.Windows.Forms.Label()
         Me.txtCusName2 = New System.Windows.Forms.TextBox()
         Me.cboProjectType = New System.Windows.Forms.ComboBox()
@@ -659,19 +657,17 @@ Partial Class frmEditProposal
         Me.Panel2.Controls.Add(Me.cmdCloseCus)
         Me.Panel2.Controls.Add(Me.cmdSaveCus)
         Me.Panel2.Controls.Add(Me.chkMode)
-        Me.Panel2.Controls.Add(Me.Label21)
-        Me.Panel2.Controls.Add(Me.txtAddress2)
         Me.Panel2.Controls.Add(Me.Label22)
         Me.Panel2.Controls.Add(Me.txtCusName2)
-        Me.Panel2.Location = New System.Drawing.Point(14, 142)
+        Me.Panel2.Location = New System.Drawing.Point(14, 90)
         Me.Panel2.Name = "Panel2"
-        Me.Panel2.Size = New System.Drawing.Size(607, 135)
+        Me.Panel2.Size = New System.Drawing.Size(607, 111)
         Me.Panel2.TabIndex = 81
         Me.Panel2.Visible = False
         '
         'cmdCloseCus
         '
-        Me.cmdCloseCus.Location = New System.Drawing.Point(387, 97)
+        Me.cmdCloseCus.Location = New System.Drawing.Point(328, 63)
         Me.cmdCloseCus.Name = "cmdCloseCus"
         Me.cmdCloseCus.Size = New System.Drawing.Size(68, 22)
         Me.cmdCloseCus.TabIndex = 41
@@ -680,7 +676,7 @@ Partial Class frmEditProposal
         '
         'cmdSaveCus
         '
-        Me.cmdSaveCus.Location = New System.Drawing.Point(277, 97)
+        Me.cmdSaveCus.Location = New System.Drawing.Point(191, 63)
         Me.cmdSaveCus.Name = "cmdSaveCus"
         Me.cmdSaveCus.Size = New System.Drawing.Size(68, 22)
         Me.cmdSaveCus.TabIndex = 40
@@ -690,30 +686,13 @@ Partial Class frmEditProposal
         'chkMode
         '
         Me.chkMode.AutoSize = True
-        Me.chkMode.Location = New System.Drawing.Point(130, 97)
+        Me.chkMode.Location = New System.Drawing.Point(73, 48)
         Me.chkMode.Name = "chkMode"
         Me.chkMode.Size = New System.Drawing.Size(72, 17)
         Me.chkMode.TabIndex = 39
         Me.chkMode.Text = "ModeAdd"
         Me.chkMode.UseVisualStyleBackColor = True
-        '
-        'Label21
-        '
-        Me.Label21.AutoSize = True
-        Me.Label21.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(222, Byte))
-        Me.Label21.Location = New System.Drawing.Point(39, 47)
-        Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(28, 16)
-        Me.Label21.TabIndex = 38
-        Me.Label21.Text = "ที่อยู่"
-        '
-        'txtAddress2
-        '
-        Me.txtAddress2.Location = New System.Drawing.Point(73, 44)
-        Me.txtAddress2.Name = "txtAddress2"
-        Me.txtAddress2.Size = New System.Drawing.Size(504, 47)
-        Me.txtAddress2.TabIndex = 37
-        Me.txtAddress2.Text = ""
+        Me.chkMode.Visible = False
         '
         'Label22
         '
@@ -1033,8 +1012,6 @@ Partial Class frmEditProposal
     Friend WithEvents cmdCloseCus As Button
     Friend WithEvents cmdSaveCus As Button
     Friend WithEvents chkMode As CheckBox
-    Friend WithEvents Label21 As Label
-    Friend WithEvents txtAddress2 As RichTextBox
     Friend WithEvents Label22 As Label
     Friend WithEvents txtCusName2 As TextBox
     Friend WithEvents cboProjectType As ComboBox

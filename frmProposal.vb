@@ -6,6 +6,7 @@ Imports System.Data.SqlClient
 Public Class frmProposal
     Dim objDB As New clsDB
     Private Sub frmProposal_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
+        frmMain.SetCriteria2Grid()
         frmMain.Show()
     End Sub
 

@@ -20,7 +20,6 @@ D:\Landmark\LCDS\LCDS\bin\Debug\LCDS.pdb
 D:\Landmark\LCDS\LCDS\bin\Debug\LCDS.xml
 D:\Landmark\LCDS\LCDS\bin\Debug\Microsoft.VisualBasic.PowerPacks.dll
 D:\Landmark\LCDS\LCDS\bin\Debug\Microsoft.VisualBasic.PowerPacks.xml
-D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.vbprojAssemblyReference.cache
 D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.vbproj.ResolveComReference.cache
 D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmEditProposal.resources
 D:\Landmark\LCDS\LCDS\obj\Debug\LCDS.frmEditURL.resources

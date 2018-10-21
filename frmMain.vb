@@ -66,7 +66,7 @@ Public Class frmMain
         chkFirstOpen.Checked = False
     End Sub
 
-    Private Sub SetCriteria2Grid()
+    Public Sub SetCriteria2Grid()
         Try
             If ComboBox1.SelectedIndex = 3 Then
                 Dim TempYearMont As String = dtp2.Value.Year & Format(dtp2.Value.Month, "00")
@@ -145,7 +145,7 @@ Public Class frmMain
         Catch ex As Exception
             MsgBox(ex.Message)
         End Try
-        
+
     End Sub
 
 

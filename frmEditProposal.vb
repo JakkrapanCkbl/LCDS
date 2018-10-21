@@ -17,8 +17,8 @@ Public Class frmEditProposal
         Call BindingcboPropertyType()
         Call BindingcboPropertyTypeDetailID(cboPropertyTypeID.SelectedValue)
         Call BindingcboProvinceID()
-        'Call BindingcboAmphoeID(cboProvinceID.SelectedValue)
-        'Call BindingcboTumbonID(cboAmphoeID.SelectedValue)
+        Call BindingcboAmphoeID(cboProvinceID.SelectedValue)
+        Call BindingcboTumbonID(cboAmphoeID.SelectedValue)
 
         Call BindingcboStaff()
         Call BindingcboStaff1()
@@ -33,7 +33,8 @@ Public Class frmEditProposal
             dtpInspectionDate.Value = Today
             dtpDueDate.Value = Today
             dtpDueDate1.Value = Today
-            txtProposalID.Text = "LC/L0000/56"
+            txtProposalID.Text = ""
+            txtRemark.Text = ""
             txtAddress.Text = ""
             txtSoi.Text = ""
             txtRoad.Text = ""
@@ -42,7 +43,7 @@ Public Class frmEditProposal
             txtSqWah.Text = "0"
             txtSqMeter.Text = "0"
             txtCusName2.Text = ""
-            txtAddress2.Text = ""
+
 
         ElseIf v_frmMode = "Edit" Then
 
@@ -421,13 +422,19 @@ Public Class frmEditProposal
 
     Private Sub Button12_Click(sender As Object, e As EventArgs) Handles Button12.Click
         Try
+
+            If txtProposalID.Text = "" Then
+                MsgBox("ต้องกำหนดรหัสก่อน")
+                Exit Sub
+            End If
             Dim strsql As String = ""
 
             If MsgBox("ยืนยันการบันทักข้อมูล", MsgBoxStyle.YesNo, "") = MsgBoxResult.Yes Then
                 If v_frmMode = "Add" Then
                     strsql = "INSERT INTO Proposal "
                     strsql += " (ProposalID, ProposalDate, ProposalDate_1, ProposalCustomer, ClientCustomer, "
-                    strsql += " ReportCustomer, ObjectiveID, Remark, ModifiedBy,ModifiedDate) "
+                    strsql += " ReportCustomer, ObjectiveID, Remark, P_ReportText, ModifiedBy, "
+                    strsql += "ModifiedDate) "
                     strsql += "Values('" & txtProposalID.Text & "', "
                     strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
                     strsql += "'" & Format(dtpProposalDate.Value.Year, "0000") & Format(dtpProposalDate.Value.Month, "00") & Format(dtpProposalDate.Value.Day, "00") & "', "
@@ -436,6 +443,7 @@ Public Class frmEditProposal
                     strsql += "'" & Me.cboReportCustomer.SelectedValue & "', "
                     strsql += "'" & Me.cboObjectiveID.SelectedValue & "', "
                     strsql += "'" & Me.txtRemark.Text & "', "
+                    strsql += "'" & Me.txtProposalID.Text & "', "
                     strsql += "'" & v_UserName & "', "
                     strsql += "getdate()) "
                     If Not objDB.funExecuteNonQuery(strsql) Then
@@ -907,37 +915,33 @@ Public Class frmEditProposal
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        txtAddress2.Visible = False
-        Label21.Visible = True
+        Button12.Enabled = False
         Panel2.Visible = True
         chkMode.Checked = True
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         txtCusName2.Text = cboReportCustomer.Text
-        Label21.Visible = False
-        txtAddress2.Text = ""
-        txtAddress2.Visible = False
+        Button12.Enabled = False
         Panel2.Visible = True
         chkMode.Checked = False
     End Sub
 
     Private Sub cmdSaveCus_Click(sender As Object, e As EventArgs) Handles cmdSaveCus.Click
         Try
+
             Dim strsql As String = ""
 
             If chkMode.Checked Then
                 Dim newCusID As Integer
                 newCusID = CInt(NewID("Customer", "CustomerID"))
                 strsql = "INSERT INTO Customer "
-                strsql = strsql & "(CustomerID, CompanyTitleID, CustomerT, Address, "
+                strsql = strsql & "(CustomerID, CompanyTitleID, CustomerT, "
                 strsql += "TumbonID, AmphoeID, ProvinceID) "
                 strsql = strsql & "Values ('" & newCusID & "', "
                 strsql = strsql & "'0', "
                 strsql = strsql & "'" & txtCusName2.Text & "', "
-                strsql = strsql & "'" & txtAddress2.Text & "', "
                 strsql += "'103103', '1031', '10') "
-
             Else
                 strsql = "Update Customer Set "
                 strsql = strsql & "CustomerT = '" & txtCusName2.Text & "' "
@@ -950,6 +954,7 @@ Public Class frmEditProposal
             End If
             Call BindingcbocboReportCustomer()
             MsgBox("Save Completed")
+            Button12.Enabled = True
             Panel2.Visible = False
         Catch ex As Exception
             MsgBox(ex.Message)
@@ -957,6 +962,7 @@ Public Class frmEditProposal
     End Sub
 
     Private Sub cmdCloseCus_Click(sender As Object, e As EventArgs) Handles cmdCloseCus.Click
+        Button12.Enabled = True
         Panel2.Visible = False
     End Sub
 

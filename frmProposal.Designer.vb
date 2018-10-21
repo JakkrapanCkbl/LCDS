@@ -113,17 +113,17 @@ Partial Class frmProposal
         '
         'cmdAdd
         '
-        Me.cmdAdd.Location = New System.Drawing.Point(1155, 14)
+        Me.cmdAdd.Location = New System.Drawing.Point(1196, 14)
         Me.cmdAdd.Name = "cmdAdd"
         Me.cmdAdd.Size = New System.Drawing.Size(76, 38)
-        Me.cmdAdd.TabIndex = 74
+        Me.cmdAdd.TabIndex = 0
         Me.cmdAdd.Text = "Add"
         Me.cmdAdd.UseVisualStyleBackColor = True
         '
         'cmdDelete
         '
         Me.cmdDelete.ForeColor = System.Drawing.Color.Red
-        Me.cmdDelete.Location = New System.Drawing.Point(1061, 14)
+        Me.cmdDelete.Location = New System.Drawing.Point(1054, 12)
         Me.cmdDelete.Name = "cmdDelete"
         Me.cmdDelete.Size = New System.Drawing.Size(76, 38)
         Me.cmdDelete.TabIndex = 77
